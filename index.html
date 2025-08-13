@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Keep-Style Notes</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header>
+    <div class="wrap">
+      <div class="bar">
+        <div class="logo"><div class="dot"></div><div>BrainBoard</div></div>
+        <div class="search">
+          <input id="search" type="text" placeholder="Search notes (title, content, tags)…" />
+          <button class="clear" title="Clear search" id="clearSearch">✕</button>
+        </div>
+        <div class="actions">
+          <button id="exportBtn" class="btn" title="Export to file">Export</button>
+          <label class="btn" title="Import from file">
+            Import
+            <input id="importInput" type="file" accept="application/json" hidden />
+          </label>
+          <button id="resetBtn" class="btn" title="Reset all data">Reset</button>
+        </div>
+      </div>
+
+      <div class="quick">
+        <input id="qTitle" type="text" placeholder="Title" />
+        <textarea id="qBody" placeholder="Take a note…"></textarea>
+        <select id="qSection"></select>
+        <button id="addNote" class="btn">Add Note</button>
+      </div>
+    </div>
+  </header>
+
+  <main class="sections-wrap">
+    <div class="sections-toolbar">
+      <span class="pill">Sections</span>
+      <span class="pill"><input id="newSectionName" placeholder="New section name" /><button id="addSection" class="iconbtn" title="Add section">＋</button></span>
+    </div>
+    <div id="board" class="board"></div>
+  </main>
+
+  <footer>
+    <div id="toast" class="toast"></div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
